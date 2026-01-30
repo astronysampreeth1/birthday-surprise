@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HAPPY BIRTHDAY 🎂</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(120deg,#ff9a9e,#fad0c4);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+header h1{
+    font-size :3.5rem;
+    animation: glow 5s infinite alternate;
+}
+header p{
+    font-size:1.4rem;
+    margin-top:10px;
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px #fff; }
+    to{ text-shadow:0 0 30px #ffeb3b; }
+}
+
+/* SECTION */
+.section{
+    padding:60px 20px;
+}
+.section h2{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+/* STORY CONTAINER */
+.story{
+    max-width:900px;
+    margin:auto;
+}
+
+/* STORY ITEM */
+.story-item{
+    display:flex;
+    align-items:center;
+    margin-bottom:80px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.story-item.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* LEFT & RIGHT */
+.story-item.left{
+    flex-direction:row;
+}
+.story-item.right{
+    flex-direction:row-reverse;
+}
+button{
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:30px;
+        background:#ff4d6d;
+        color:#fff;
+        cursor:pointer;
+        transition:0.3s;
+    }
+button:hover{
+        background:#e63956;
+        transform:scale(1.05);
+    }
+
+
+/* IMAGE */
+.story-item img{
+    width:300px;
+    height:400px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* TEXT */
+.story-text{
+    width:50%;
+    padding:20px;
+}
+.story-text h3{
+    font-size: 1.2rem;;
+    margin-bottom:5 0px;
+}
+.story-text p{
+    font-size:1.1rem;
+    line-height:1.6;
+}
+@keyframes floatUp{
+    from{ transform:translateY(0); }
+    to{ transform:translateY(-120vh); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <p>A beautiful story of memories & smiles 💖</p>
+</header>
+
+<body>
+
+<div class="container">
+    <button id="startBtn">🎉 Click for Birthday Surprise 🎂</button>
+
+<!-- PAGE 1 -->
+<div class="section">
+<h2>🌸 Sweet Beginnings</h2>
+<div class="story">
+
+<div class="story-item left">
+    <img src="C:\Users\vvars\Downloads\WhatsApp Image 2022-12-30 at 8.37.21 PM.jpeg">
+    <div class="story-text">
+        <h3>Beautiful Smile 😊</h3>
+        <p>Your smile has the power to brighten every room.</p>
+        <p>Where you go my eyes follows you to see the brightness of u r smile.</p>
+    </div>
+</div>
+
+<div class="story-item right">
+    <img src="C:\Users\vvars\Downloads\pass port.jpeg">
+    <div class="story-text">
+        <h3>Golden Moments ✨</h3>
+        <p>Every moment with you becomes a memory forever.</p>
+        <p>The childish behaviour with in you makes me more active.</p>
+        <p>May be i fallen to that child girl.</p>
+    </div>
+</div>
+
+
+</div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="section">
+<h2>📸 Lovely Memories</h2>
+<div class="story">
+
+<div class="story-item right">
+    <img src="C:\Users\vvars\Downloads\WhatsApp Image 2025-12-21 at 10.53.08 AM.jpeg">
+    <div class="story-text">
+        <h3>Captured Forever 📷</h3>
+        <p>Every picture tells a beautiful story.</p>
+        <p>I admire your beauty and smile. </p>
+        <p>“Are you made of magic? Because whenever you’re near, everything else disappears.” </p>
+    </div>
+</div>
+
+<div class="story-item left">
+    <img src="C:\Users\vvars\Downloads\WhatsApp Image 2022-12-30 at 8.37.21 PM.jpeg">
+    <div class="story-text">
+        <h3>Joyful Times 🌈</h3>
+        <p>Your presence makes everything special.</p>
+        <p>when i see you my day starts with new begining.</p>
+        <p>I dont need a map to reach uh!  my Heart already belongs to uh.</p>
+    </div>
+</div>
+
+<div class="story-item right">
+    <img src="C:\Users\vvars\Downloads\WhatsApp Image 2022-12-30 at 8.37.21 PM.jpeg">
+    <div class="story-text">
+        <h3>Endless Smiles 😄</h3>
+        <p>Smiles that stay forever in our hearts.</p>
+        <p>Do you believe in first sight love!......or else shall i take to past</p>
+    </div>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+<script>
+/* SCROLL ANIMATION */
+const items = document.querySelectorAll(".story-item");
+window.addEventListener("scroll",()=>{
+    items.forEach(item=>{
+        const rect = item.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+            item.classList.add("show");
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
