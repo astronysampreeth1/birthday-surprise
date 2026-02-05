@@ -75,21 +75,23 @@ header p{
 .story-item.right{
     flex-direction:row-reverse;
 }
-button{
-        padding:15px 30px;
-        font-size:18px;
-        border:none;
-        border-radius:30px;
-        background:#ff4d6d;
-        color:#fff;
-        cursor:pointer;
-        transition:0.3s;
-    }
-button:hover{
-        background:#e63956;
-        transform:scale(1.05);
-    }
 
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+    display:block;
+    margin:30px auto;
+}
+button:hover{
+    background:#e63956;
+    transform:scale(1.05);
+}
 
 /* IMAGE */
 .story-item img{
@@ -106,16 +108,12 @@ button:hover{
     padding:20px;
 }
 .story-text h3{
-    font-size: 1.2rem;;
-    margin-bottom:5 0px;
+    font-size:1.2rem;
+    margin-bottom:10px;
 }
 .story-text p{
     font-size:1.1rem;
     line-height:1.6;
-}
-@keyframes floatUp{
-    from{ transform:translateY(0); }
-    to{ transform:translateY(-120vh); }
 }
 </style>
 </head>
@@ -127,10 +125,7 @@ button:hover{
     <p>A beautiful story of memories & smiles 💖</p>
 </header>
 
-<body>
-
-<div class="container">
-    <button id="startBtn">🎉 Click for Birthday Surprise 🎂</button>
+<button id="startBtn">🎉 Click for Birthday Surprise 🎂</button>
 
 <!-- PAGE 1 -->
 <div class="section">
@@ -138,7 +133,7 @@ button:hover{
 <div class="story">
 
 <div class="story-item left">
-    <img src="C:\Users\vvars\Downloads\WhatsApp Image 2022-12-30 at 8.37.21 PM.jpeg">
+    <img src="https://raw.githubusercontent.com/astronysampreeth1/birthday-surprise/main/Images/WhatsApp%20Image%202022-12-30%20at%208.37.21%20PM.jpeg">
     <div class="story-text">
         <h3>Beautiful Smile 😊</h3>
         <p>Your smile has the power to brighten every room.</p>
@@ -147,7 +142,7 @@ button:hover{
 </div>
 
 <div class="story-item right">
-    <img src="C:\Users\vvars\Downloads\pass port.jpeg">
+    <img src="https://raw.githubusercontent.com/astronysampreeth1/birthday-surprise/main/Images/pass%20port.jpeg">
     <div class="story-text">
         <h3>Golden Moments ✨</h3>
         <p>Every moment with you becomes a memory forever.</p>
@@ -155,7 +150,6 @@ button:hover{
         <p>May be i fallen to that child girl.</p>
     </div>
 </div>
-
 
 </div>
 </div>
@@ -166,52 +160,48 @@ button:hover{
 <div class="story">
 
 <div class="story-item right">
-    <img src="C:\Users\vvars\Downloads\WhatsApp Image 2025-12-21 at 10.53.08 AM.jpeg">
+    <img src="https://raw.githubusercontent.com/astronysampreeth1/birthday-surprise/main/Images/WhatsApp%20Image%202025-12-21%20at%2010.53.08%20AM.jpeg">
     <div class="story-text">
         <h3>Captured Forever 📷</h3>
         <p>Every picture tells a beautiful story.</p>
-        <p>I admire your beauty and smile. </p>
-        <p>“Are you made of magic? Because whenever you’re near, everything else disappears.” </p>
+        <p>I admire your beauty and smile.</p>
+        <p>“Are you made of magic? Because whenever you’re near, everything else disappears.”</p>
     </div>
 </div>
 
 <div class="story-item left">
-    <img src="C:\Users\vvars\Downloads\WhatsApp Image 2022-12-30 at 8.37.21 PM.jpeg">
+    <img src="https://raw.githubusercontent.com/astronysampreeth1/birthday-surprise/main/Images/WhatsApp%20Image%202022-12-30%20at%208.37.21%20PM.jpeg">
     <div class="story-text">
         <h3>Joyful Times 🌈</h3>
         <p>Your presence makes everything special.</p>
-        <p>when i see you my day starts with new begining.</p>
-        <p>I dont need a map to reach uh!  my Heart already belongs to uh.</p>
+        <p>When I see you my day starts with a new beginning.</p>
+        <p>I don’t need a map to reach you — my heart already belongs to you.</p>
     </div>
 </div>
 
 <div class="story-item right">
-    <img src="C:\Users\vvars\Downloads\WhatsApp Image 2022-12-30 at 8.37.21 PM.jpeg">
+    <img src="https://raw.githubusercontent.com/astronysampreeth1/birthday-surprise/main/Images/WhatsApp%20Image%202022-12-30%20at%208.37.21%20PM.jpeg">
     <div class="story-text">
         <h3>Endless Smiles 😄</h3>
         <p>Smiles that stay forever in our hearts.</p>
-        <p>Do you believe in first sight love!......or else shall i take to past</p>
+        <p>Do you believe in love at first sight… or should I take you back to the past?</p>
     </div>
 </div>
 
 </div>
 </div>
 
-
-</div>
-</div>
 <script>
 /* SCROLL ANIMATION */
 const items = document.querySelectorAll(".story-item");
-window.addEventListener("scroll",()=>{
-    items.forEach(item=>{
+window.addEventListener("scroll", () => {
+    items.forEach(item => {
         const rect = item.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 100){
+        if (rect.top < window.innerHeight - 100) {
             item.classList.add("show");
         }
     });
 });
-
 </script>
 
 </body>
